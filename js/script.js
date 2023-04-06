@@ -476,7 +476,8 @@ createApp({
             this.contacts[realIndex].date = new Date();
 
             this.orderContacts();
-            this.$nextTick(() => this.scrollDown());
+            let element = document.getElementsByClassName("al-element")[this.reverseIndex(this.index)];
+            this.$nextTick(() => {this.scrollDown(); element.scrollIntoView(false);});
         },
 
         chooseMessage(){
@@ -800,6 +801,8 @@ createApp({
             this.contacts[this.index].date = new Date(2015, 0, 1);
 
             this.orderContacts();
+            let element = document.getElementsByClassName("al-element")[this.reverseIndex(this.index)];
+            this.$nextTick(() => element.scrollIntoView());
         },
 
         findIndexById(id){
