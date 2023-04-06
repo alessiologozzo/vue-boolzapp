@@ -965,6 +965,7 @@ createApp({
 
             this.index = random;
             this.start = false;
+            this.contactSelected = true;
 
         },
 
