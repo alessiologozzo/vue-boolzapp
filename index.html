@@ -164,16 +164,16 @@
 
                                 <div class="al-menu">
                                     
-                                    <div @click="removeAllMessages()" v-if="!start && !contacts[index].empty" class="al-menu-item">
+                                    <div @click="removeAllMessages()" v-if="!start && !contacts[index].empty && contactSelected" class="al-menu-item">
                                         <span>Elimina tutti i messaggi</span>
                                     </div>
 
-                                    <div @click="deleteContact()" v-if="!start" class="al-menu-item">
+                                    <div @click="deleteContact()" v-if="!start && contactSelected" class="al-menu-item">
                                         <span>Elimina contatto</span>
                                     </div>
 
-                                    <div @click="randomChat()" v-if="start" class="al-menu-item">
-                                        <span>Scegli un contatto casuale</span>
+                                    <div @click="randomChat()" v-if="start || (!contactSelected && !empty)" class="al-menu-item">
+                                        <span>Seleziona un contatto casuale</span>
                                     </div>
 
                                 </div>
