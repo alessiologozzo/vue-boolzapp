@@ -393,7 +393,7 @@ createApp({
 
         setSoundsVolume(){
             for(let i = 0; i < this.sounds.length; i++)
-                this.sounds[i].volume = 0.7;
+                this.sounds[i].volume = 0.5;
         },
 
         sendMessage(){
