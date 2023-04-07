@@ -853,7 +853,8 @@ createApp({
             if(this.start)
                 this.start = false;
             
-            this.contactSelected = false;
+            if(this.reverseIndex(i) == this.index)
+                this.contactSelected = false;
 
             if(this.contacts.length > 1){
 
